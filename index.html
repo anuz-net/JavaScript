@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            height: auto;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="frm" onsubmit="frm()">
+        <label for="Name">Enter Your Name:</label>
+        <input type="text" id="name" name="name"> 
+        <label for="Age">Enter Your Age:</label>
+        <input type="text" id="age" name="age"> 
+        <label for="Address">Enter Your Address:</label>
+        <input type="text" id="address" name="address">
+        <label for="Number">Enter Your Number:</label>
+        <input type="text" id="number" name="number"> 
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        var frm =()=>{
+            var name= document.getElementById('name').value;
+            var email= document.getElementById('email').value;
+            var address= document.getElementById('address').value;
+            var number= document.getElementById('number').value;
+
+            if(name==="" && email === "" && address ==="" && number===""){
+                alert("Please Fill out Details")
+            }
+        }
+    </script>
+</body>
+</html>
